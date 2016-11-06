@@ -17,7 +17,7 @@
 #'
 #' sensSurv(data=Telemedicine.matchedsample,exp="Telehealth.n",outcome="Graftstatus",failtime="failtimetxp",Gamma=1.5,alpha =0.05,Gammainterval=0.01)
 
-sensSurv = function(data, exp, outcome, failtime,Gamma,alpha = 0.05,Gammainterval=0.01) {
+sensSurv = function(data, exp, outcome, failtime,Gamma = 6,alpha = 0.05,Gammainterval=0.01) {
   results = list()
 
   data1s = subset(data, select = c("matches", exp, outcome, failtime))
