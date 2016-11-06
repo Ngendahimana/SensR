@@ -29,7 +29,7 @@ This function allows you to assess how sensitive your results are to unmeasured 
 \examples{
  data("Telemedicine.matchedsample") # Reading in the data produced by a matching method
 
-sensSurv(data=Telemedicine.matchedsample,exp="Telehealth",outcome="Graftstatus",failtime="failtimetxp",Gamma=1.5,alpha =0.05,Gammainterval=0.01)
+sensSurv(data=Telemedicine.matchedsample,exp="Telehealth.n",outcome="Graftstatus",failtime="failtimetxp",Gamma=1.5,alpha =0.05,Gammainterval=0.01)
 }
 \references{
 Section 4.4.8. of Rosenbaum PR (2002) Observational Studies, 2nd Edition.
