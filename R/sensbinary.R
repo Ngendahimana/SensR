@@ -1,7 +1,7 @@
 
 
 
-#' Sensitivity Analysis for A Simple Comparison for Censored Survival
+#' Sensitivity Analysis for A Simple Comparison for binary outcomes
 #' This function allows you to assess how sensitive your results are to unmeasured variable.
 
 #' @param data A matched sample
