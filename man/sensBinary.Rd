@@ -2,7 +2,7 @@
 % Please edit documentation in R/sensbinary.R
 \name{sensBinary}
 \alias{sensBinary}
-\title{Sensitivity Analysis for A Simple Comparison for Censored Survival
+\title{Sensitivity Analysis for A Simple Comparison for binary outcomes
 This function allows you to assess how sensitive your results are to unmeasured variable.}
 \usage{
 sensBinary(data, StartGamma, EndGamma, Gammainterval, outcome, exp)
@@ -21,7 +21,7 @@ sensBinary(data, StartGamma, EndGamma, Gammainterval, outcome, exp)
 \item{alpha}{Significance level}
 }
 \description{
-Sensitivity Analysis for A Simple Comparison for Censored Survival
+Sensitivity Analysis for A Simple Comparison for binary outcomes
 This function allows you to assess how sensitive your results are to unmeasured variable.
 }
 \examples{
