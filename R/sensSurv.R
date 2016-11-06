@@ -15,7 +15,7 @@
 #' @export
 #' @examples  data("Telemedicine.matchedsample") # Reading in the data produced by a matching method
 #'
-#' sensSurv(data=Telemedicine.matchedsample,exp="Telehealth",outcome="Graftstatus",failtime="failtimetxp",Gamma=1.5,alpha =0.05,Gammainterval=0.01)
+#' sensSurv(data=Telemedicine.matchedsample,exp="Telehealth.n",outcome="Graftstatus",failtime="failtimetxp",Gamma=1.5,alpha =0.05,Gammainterval=0.01)
 
 sensSurv = function(data, exp, outcome, failtime,Gamma,alpha,Gammainterval) {
   results = list()
