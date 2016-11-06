@@ -17,7 +17,7 @@
 #'
 #' sensSurv(data=Telemedicine.matchedsample,exp="Telehealth.n",outcome="Graftstatus",failtime="failtimetxp",Gamma=1.5,alpha =0.05,Gammainterval=0.01)
 
-sensSurv = function(data, exp, outcome, failtime,Gamma,alpha,Gammainterval) {
+sensSurv = function(data, exp, outcome, failtime,Gamma,alpha = 0.05,Gammainterval=0.01) {
   results = list()
 
   data1s = subset(data, select = c("matches", exp, outcome, failtime))
@@ -62,7 +62,7 @@ sensSurv = function(data, exp, outcome, failtime,Gamma,alpha,Gammainterval) {
 
   vrt = table1[table1$min == min(table1$min), ]$gamVal
   hrz = table1[table1$min == min(table1$min), ]$pupper
-
+  xtables()
   plot(table1$pupper ~ table1$gamVal, type = "l", xlab = "Gamma", ylab = "p-val upper bound", main = "Sensitivity plot for survival outcomes")
   segments(x0 = 0, y0 = hrz, x1 = vrt, y1 = hrz, col = "pink", lty = "dashed", lwd = 3)
   segments(x0 = vrt, y0 = 0, x1 = vrt, y1 = hrz, col = "pink", lty = "dashed", lwd = 3)
