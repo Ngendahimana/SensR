@@ -14,7 +14,7 @@
 #' @export
 #' @examples  data("Telemedicine.matchedsample") # Reading in the data produced by a matching method
 #'
-#' sensCont(data=Telemedicine.matchedsample,exp="Telehealth.n",outcome = "GFRoneyr",Gamma=1.5,Gammainterval = 0.01)
+#' sensCont(data=Telemedicine.matchedsample,exp="Telehealth",outcome = "GFRoneyr",Gamma=1.5,Gammainterval = 0.01)
 
 
 
