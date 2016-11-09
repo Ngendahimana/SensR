@@ -2,7 +2,7 @@
 
 
 #' Sensitivity Analysis for A Simple Comparison for binary outcomes
-#' This function allows you to assess how sensitive your results are to unmeasured variable.
+
 
 #' @param data A matched sample
 #' @param exp A variables defining exposure group
@@ -48,11 +48,22 @@ sensBinary = function(data,StartGamma,EndGamma,Gammainterval,outcome,exp){
       table2$pval_upperbound[i] = 2*(pbinom(c,n,table2[i,3],lower.tail = FALSE))
     }
 
+    ylim=table2$pval_upperbound[length(gamma)]
+    unbiasedP=round(table2$pval_upperbound[1],3)
+
+
     table2$min = abs(0.05-table2$pval_upperbound)
     vrt = table2[table2$min==min(table2$min),]$gamma
-    hrz = table2[table2$min==min(table2$min),]$pval_upperbound
+    hrz = round(table2[table2$min==min(table2$min),]$pval_upperbound,3)
 
    plot(table2$pval_upperbound~table2$gamma,type="l",xlab="Gamma",ylab="p-val upper bound",main="Sensitivity analysis plot")
+
+   mtext( paste0("   p = ",unbiasedP),side = 3)
+   mtext(expression(Gamma == 1),side = 3,adj = 0)
+   text(vrt, hrz, paste("(",hrz,",",vrt,")"),pos = 4,cex = .8)
+   segments(x0 = 0, y0 = hrz, x1 = vrt, y1 = hrz, col = "pink", lty = "dashed", lwd = 3)
+   segments(x0 = vrt, y0 = 0, x1 = vrt, y1 = hrz, col = "pink", lty = "dashed", lwd = 3)
+
    segments(x0=0,y0=hrz,x1=vrt,y1=hrz,col = "pink",lty = "dashed",lwd = 3)
    segments(x0=vrt,y0=0,x1=vrt,y1=hrz,col = "pink",lty = "dashed",lwd = 3)
 

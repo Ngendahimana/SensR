@@ -82,19 +82,25 @@ sensCont = function(data,exp,outcome,Gamma,Gammainterval){
     table1$plower[i]=round(min(1,2*pnorm((teststat-table1[i,4])/table1[i,6],lower.tail = FALSE) ),4)
   }
 
-  results$sensitivitytable = table1
+  #results$sensitivitytable = table1
 
   table1$min = abs(0.05-table1$pupper)
 
   vrt = table1[table1$min==min(table1$min),]$gamVal
   hrz = table1[table1$min==min(table1$min),]$pupper
+  ylim=table1$pupper[length(gamVal)]
+  unbiasedP=table1$pupper[1]
+
+
 
   plot(table1$pupper~table1$gamVal,type="l",xlab="Gamma",ylab="p-val upper bound",main="Sensitivity analysis plot")
   segments(x0=0,y0=hrz,x1=vrt,y1=hrz,col = "pink",lty = "dashed",lwd = 3)
   segments(x0=vrt,y0=0,x1=vrt,y1=hrz,col = "pink",lty = "dashed",lwd = 3)
 
-  #text(1.05, 0.25, paste("Gamma",vrt),cex = 1)
-  #text(1.05, 0.24, paste("p-value",hrz),cex = 1)
+  mtext( paste0("   p = ",unbiasedP),side = 3)
+  mtext(expression(Gamma == 1),side = 3,adj = 0)
+  text(vrt, hrz, paste("(",hrz,",",vrt,")"),pos = 4,cex = .8)
+
 
   results$upperbound_pval =table1[table1$min==min(table1$min),]$pupper
   results$Gamma = table1[table1$min==min(table1$min),]$gamVal

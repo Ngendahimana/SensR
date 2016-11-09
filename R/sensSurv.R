@@ -55,8 +55,8 @@ sensSurv = function(data, exp, outcome, failtime,Gamma = 6,alpha = 0.05,Gammaint
     table1$plower[i] = round(min(1, 2 * pnorm((expoutlive - table1[i, 4])/table1[i, 6], lower.tail = FALSE)), 4)
   }
 
-
-
+  ylim=table1$pupper[length(gamVal)]
+  unbiasedP=table1$pupper[1]
 
   table1$min = abs(alpha - table1$pupper)
 
@@ -64,12 +64,16 @@ sensSurv = function(data, exp, outcome, failtime,Gamma = 6,alpha = 0.05,Gammaint
   hrz = table1[table1$min == min(table1$min), ]$pupper
 
   plot(table1$pupper ~ table1$gamVal, type = "l", xlab = "Gamma", ylab = "p-val upper bound", main = "Sensitivity plot for survival outcomes")
+
+  mtext( paste0("   p = ",unbiasedP),side = 3)
+  mtext(expression(Gamma == 1),side = 3,adj = 0)
+  text(vrt, hrz, paste("(",hrz,",",vrt,")"),pos = 4,cex = .8)
   segments(x0 = 0, y0 = hrz, x1 = vrt, y1 = hrz, col = "pink", lty = "dashed", lwd = 3)
   segments(x0 = vrt, y0 = 0, x1 = vrt, y1 = hrz, col = "pink", lty = "dashed", lwd = 3)
 
-
   results$upperbound_pval = hrz = table1[table1$min == min(table1$min), ]$pupper
   results$Gamma = table1[table1$min == min(table1$min), ]$gamVal
+
 
   return(results)
 
