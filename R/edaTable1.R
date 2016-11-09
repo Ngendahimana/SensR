@@ -9,7 +9,7 @@
 #'
 #'vars <- c("Age", "Gender", "Race1", "ESRD", "BMI", "TransplantType", "Retransplant", "Hypertension", "Dialysis", "DGF", "Induction", "PSrisk",  "Surgeon","ps","linps") # vector of baseline variables
 #' # calling funtion
-#' edaTable(baselinevars = vars,expVar = "Telehealth",matched = Telemedicine.matchedsample,unmatched = Telemedicine)
+#' edaTable(baselinevars = vars,expvars = "Telehealth",matched = Telemedicine.matchedsample,unmatched = Telemedicine)
 
 
 
@@ -21,8 +21,8 @@ res1 <- compareGroups::compareGroups(formula, data = unmatched, ref = 1)
 res2 <- compareGroups::compareGroups(formula, data = matched, ref = 1)
 
 
-table01=createTable(res1,show.p.mul = TRUE,show.p.overall = TRUE)
-table02=createTable(res2, show.p.mul =TRUE,show.p.overall = TRUE)
+table01=compareGroups::createTable(res1,show.p.mul = TRUE,show.p.overall = TRUE)
+table02=compareGroups::createTable(res2, show.p.mul =TRUE,show.p.overall = TRUE)
 xptable01=cbind("Before matching"= table01,"After matching"=table02)
 export2pdf(xptable01,'table1.pdf',size="small")
 #results$CombTable = xptable01
