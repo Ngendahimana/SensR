@@ -19,7 +19,7 @@
 
 
 
-sensBinary = function(data,StartGamma,EndGamma,Gammainterval,outcome,exp){
+sensBinary = function(data,StartGamma,EndGamma,Gammainterval,outcome,exp,alpha = 0.05){
 
   results = list()
 
@@ -52,7 +52,7 @@ sensBinary = function(data,StartGamma,EndGamma,Gammainterval,outcome,exp){
     unbiasedP=round(table2$pval_upperbound[1],3)
 
 
-    table2$min = abs(0.05-table2$pval_upperbound)
+    table2$min = abs(alpha-table2$pval_upperbound)
     vrt = table2[table2$min==min(table2$min),]$gamma
     hrz = round(table2[table2$min==min(table2$min),]$pval_upperbound,3)
 

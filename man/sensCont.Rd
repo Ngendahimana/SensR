@@ -27,7 +27,7 @@ This function allows you to assess how sensitive your results are to unmeasured 
 \examples{
  data("Telemedicine.matchedsample") # Reading in the data produced by a matching method
 
-sensCont(data=Telemedicine.matchedsample,exp="Telehealth.n",outcome = "GFRoneyr",Gamma=1.5,Gammainterval = 0.02)
+sensCont(data=Telemedicine.matchedsample,exp="Telehealth.n",outcome = "GFRoneyr",Gamma=1.5,Gammainterval = 0.06)
 }
 \references{
 Section 4.4.8. of Rosenbaum PR (2002) Observational Studies, 2nd Edition.
