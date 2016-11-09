@@ -7,7 +7,7 @@ if (!file.exists("data-raw/Telemedicine2.csv")) {
   Telemedicine <- read_csv("~/Dropbox/Dissertation_David Ngendahimana/package_development/SensR/data-raw/Telemedicine2.csv")
 }
 
-
+Telemedicine = read.csv("data-raw/Telemedicine2.csv")
 #### ESDR
 Telemedicine$ESRD.HTN = as.numeric(Telemedicine$ESRD == "HTN")
 Telemedicine$ESRD.Other = as.numeric(Telemedicine$ESRD == "Other")
@@ -83,4 +83,5 @@ matches <- factor(rep(match1$index.treated, 2))
 Telemedicine.matchedsample <- cbind(matches, Telemedicine[c(match1$index.control, match1$index.treated),])
 
 save(Telemedicine.matchedsample, file = "data/Telemedicine.matchedsample.csv")
-
+save(Telemedicine,file = "data/Telemedicine.csv")
+devtools::use_data(Telemedicine, compress = "xz")
