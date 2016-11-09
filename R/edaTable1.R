@@ -13,7 +13,7 @@
 
 
 
-edaTable = function(baselinevars,expVars,matched,unmatched){
+edaTable = function(baselinevars,expvars,matched,unmatched){
 results = list()
 formula= reformulate(termlabels=baselinevars, response =expvars)
 
