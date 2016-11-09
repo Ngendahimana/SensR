@@ -3,7 +3,7 @@
 #' @param baselinevars A vector of baseline variables
 #' @param expvars A variables defining exposure group
 #' @param matched a matched dataset
-#' @param unmatched an unmatched dataset
+#' @param unmatched an unmatched dataset (original dataset)
 #' @export
 #' @examples  data("Telemedicine.matchedsample");data("Telemedicine") # loading matched and unmatched datasets respectively
 #'
