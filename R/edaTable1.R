@@ -24,7 +24,7 @@ res2 <- compareGroups::compareGroups(formula, data = matched, ref = 1)
 table01=compareGroups::createTable(res1,show.p.mul = TRUE,show.p.overall = TRUE)
 table02=compareGroups::createTable(res2, show.p.mul =TRUE,show.p.overall = TRUE)
 xptable01=cbind("Before matching"= table01,"After matching"=table02)
-tryCatch(compareGroups::export2pdf(xptable01,'table1.pdf',size="small"))
+try(compareGroups::export2pdf(xptable01,'table1.pdf',size="small"))
 
 
 
