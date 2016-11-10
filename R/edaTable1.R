@@ -28,7 +28,9 @@ compareGroups::export2pdf(xptable01,'table1.pdf',size="small")
 Biobase::openPDF("table1.pdf")
 
 
-return(Biobase::openPDF("table1.pdf"))
+#return(Biobase::openPDF("table1.pdf"))
 
 }
+
+Biobase::openPDF("table1.pdf")
 
