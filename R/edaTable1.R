@@ -27,8 +27,8 @@ xptable01=cbind("Before matching"= table01,"After matching"=table02)
 compareGroups::export2pdf(xptable01,'table1.pdf',size="small")
 Biobase::openPDF("table1.pdf")
 
-#results$CombTable = xptable01
-#return(results)
+
+return(Biobase::openPDF("table1.pdf"))
 
 }
 
