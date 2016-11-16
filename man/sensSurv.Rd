@@ -2,8 +2,7 @@
 % Please edit documentation in R/sensSurv.R
 \name{sensSurv}
 \alias{sensSurv}
-\title{Sensitivity Analysis for A Simple Comparison for Censored Survival
-This function allows you to assess how sensitive your results are to unmeasured variable.}
+\title{Sensitivity Analysis for A Simple Comparison for Censored Survival}
 \usage{
 sensSurv(data, exp, outcome, failtime, Gamma = 6, alpha = 0.05,
   Gammainterval = 0.01)
@@ -24,7 +23,6 @@ sensSurv(data, exp, outcome, failtime, Gamma = 6, alpha = 0.05,
 \item{Gammainterval}{interval between two hidden bias to be assessed}
 }
 \description{
-Sensitivity Analysis for A Simple Comparison for Censored Survival
 This function allows you to assess how sensitive your results are to unmeasured variable.
 }
 \examples{

@@ -7,8 +7,8 @@
 #' @param Treatment variable contianing treatment assignments with 1 representing treatment and 0 represinting no treatment
 #' @param matchscore Name of the score used to match.can take the values "ps" or "linps"
 #' @param covlist a vector containing a list of variables in your study
-#' @examples  covlist1=c("covA", "covB", "covC", "covD", "covE", "covF.Middle", "covF.High", "Asqr","BC", "BD")
-
+#' @examples  covlist1=c("covA", "covB", "covC", "covD", "covE", "covF.Middle", "covF.High", "Asqr","BC", "BD") # creating a vector of variables
+#' # calling function
 #' rubinRules(data=toy.matchedsample,Treatment="treated",covlist=covlist1)
 
 
