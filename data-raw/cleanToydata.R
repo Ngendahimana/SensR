@@ -34,6 +34,9 @@ toy.matchedsample <- cbind(matches, toy[c(match1$index.control, match1$index.tre
 
 
 
+#save(toy.matchedsample, file = 'data/toy.matchedsample.rdata', compress = 'xz')
+
+devtools::use_data(toy.matchedsample, overwrite = TRUE)
 
 
 
