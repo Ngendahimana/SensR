@@ -1,6 +1,7 @@
 
 #'Assessing Rubin's rules in design of observational studies
-#' This function generates a plot to assess rubin's rules. The ratio of residual and variances, Rule 1 and 2 respectively, are displayed at the top of the plot.
+#'
+#' @description This function generates a plot to assess rubin's rules. The ratio of residual and variances, Rule 1 and 2 respectively, are displayed at the top of the plot.
 
 #' @param data a dataframe which must have either a propensity score(PS) column or a transformed version of the PS
 #' @param Treatment variable contianing treatment assignments with 1 representing treatment and 0 represinting no treatment
