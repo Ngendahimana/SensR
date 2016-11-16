@@ -19,7 +19,8 @@ rubinRules(data, Treatment, matchscore = "ps", covlist)
 This function generates a plot to assess rubin's rules. The ratio of residual and variances, Rule 1 and 2 respectively, are displayed at the top of the plot.
 }
 \examples{
- covlist1=c("covA", "covB", "covC", "covD", "covE", "covF.Middle", "covF.High", "Asqr","BC", "BD") # creating a vector of variables
+data("toy.matchedsample")
+covlist1=c("covA", "covB", "covC", "covD", "covE", "covF.Middle", "covF.High", "Asqr","BC", "BD") # creating a vector of variables
 # calling function
 rubinRules(data=toy.matchedsample,Treatment="treated",covlist=covlist1)
 }
