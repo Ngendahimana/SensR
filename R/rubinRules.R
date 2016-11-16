@@ -1,4 +1,20 @@
 
+#'Assessing Rubin's rules in design of observational studies
+#' This function generates a plot to assess rubin's rules. The ratio of residual and variances, Rule 1 and 2 respectively, are displayed at the top of the plot.
+
+#' @param data a dataframe which must have either a propensity score(PS) column or a transformed version of the PS
+#' @param Treatment variable contianing treatment assignments with 1 representing treatment and 0 represinting no treatment
+#' @param matchscore Name of the score used to match.can take the values "ps" or "linps"
+#' @param covlist a vector containing a list of variables in your study
+#' @examples  covlist1=c("covA", "covB", "covC", "covD", "covE", "covF.Middle", "covF.High", "Asqr","BC", "BD")
+
+#' rubinRules(data=toy.matchedsample,Treatment="treated",covlist=covlist1)
+
+
+#' @keywords Rubin rules
+
+
+
 rubinRules = function(data,Treatment,matchscore="ps",covlist){
 
   results=list()
@@ -52,23 +68,5 @@ rubinRules = function(data,Treatment,matchscore="ps",covlist){
     return(results)
 
 }
-
-#Example
-covlist1=c("covA", "covB", "covC", "covD", "covE", "covF.Middle", "covF.High", "Asqr","BC", "BD")
-
-rubinRules(data=toy.matchedsample,Treatment="treated",covlist=covlist1)
-
-
-
-
-
-
-
-
-data= toy.matchedsample
-Treatment="treated"
-matchscore="ps"
-
-covlist=c("covA", "covB", "covC", "covD", "covE", "covF.Middle", "covF.High", "Asqr","BC", "BD")
 
 
