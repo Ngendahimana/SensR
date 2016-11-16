@@ -5,7 +5,8 @@
 \title{Sensitivity Analysis for A Simple Comparison for Censored Survival
 This function allows you to assess how sensitive your results are to unmeasured variable.}
 \usage{
-sensSurv(data, exp, outcome, failtime, Gamma, alpha, Gammainterval)
+sensSurv(data, exp, outcome, failtime, Gamma = 6, alpha = 0.05,
+  Gammainterval = 0.01)
 }
 \arguments{
 \item{data}{A matched sample}

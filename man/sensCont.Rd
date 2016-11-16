@@ -4,7 +4,8 @@
 \alias{sensCont}
 \title{Sensitivity Analysis for A Simple Comparison for continious data}
 \usage{
-sensCont(data, exp, outcome, Gamma, Gammainterval)
+sensCont(data, exp, outcome, Gamma = 6, Gammainterval = 0.01,
+  alpha = 0.05)
 }
 \arguments{
 \item{data}{A matched sample}
@@ -17,9 +18,9 @@ sensCont(data, exp, outcome, Gamma, Gammainterval)
 
 \item{Gammainterval}{interval between two hidden bias to be assessed}
 
-\item{failtime}{Time to event}
-
 \item{alpha}{Significance level}
+
+\item{failtime}{Time to event}
 }
 \description{
 This function allows you to assess how sensitive your results are to unmeasured variable.

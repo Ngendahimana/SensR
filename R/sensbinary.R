@@ -71,7 +71,6 @@ sensBinary = function(data,StartGamma,EndGamma,Gammainterval,outcome,exp,alpha =
    k=rbind(vrt,hrz)
    rownames(k)=c("Gamma .......","p_val upperbound")
    results$BiasMeasures=round(k,3)
-   message(" Note: Table 1 is now in your working directory")
    return(results)
 }
 

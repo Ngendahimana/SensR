@@ -18,7 +18,7 @@
 
 
 
-sensCont = function(data,exp,outcome,Gamma,Gammainterval){
+sensCont = function(data,exp,outcome,Gamma = 6,Gammainterval=0.01,alpha =0.05){
 
   results = list()
   data1c =subset(data,select =c("matches",exp,outcome))
@@ -84,7 +84,7 @@ sensCont = function(data,exp,outcome,Gamma,Gammainterval){
 
   #results$sensitivitytable = table1
 
-  table1$min = abs(0.05-table1$pupper)
+  table1$min = abs(alpha-table1$pupper)
 
   vrt = table1[table1$min==min(table1$min),]$gamVal
   hrz = table1[table1$min==min(table1$min),]$pupper

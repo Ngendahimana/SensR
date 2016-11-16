@@ -2,10 +2,10 @@
 % Please edit documentation in R/sensbinary.R
 \name{sensBinary}
 \alias{sensBinary}
-\title{Sensitivity Analysis for A Simple Comparison for binary outcomes
-This function allows you to assess how sensitive your results are to unmeasured variable.}
+\title{Sensitivity Analysis for A Simple Comparison for binary outcomes}
 \usage{
-sensBinary(data, StartGamma, EndGamma, Gammainterval, outcome, exp)
+sensBinary(data, StartGamma, EndGamma, Gammainterval, outcome, exp,
+  alpha = 0.05)
 }
 \arguments{
 \item{data}{A matched sample}
@@ -16,13 +16,12 @@ sensBinary(data, StartGamma, EndGamma, Gammainterval, outcome, exp)
 
 \item{exp}{A variables defining exposure group}
 
-\item{Gamma}{Bias to be assessed}
-
 \item{alpha}{Significance level}
+
+\item{Gamma}{Bias to be assessed}
 }
 \description{
 Sensitivity Analysis for A Simple Comparison for binary outcomes
-This function allows you to assess how sensitive your results are to unmeasured variable.
 }
 \examples{
  data("Telemedicine.matchedsample") # Reading in the data produced by a matching method

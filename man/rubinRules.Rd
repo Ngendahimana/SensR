@@ -2,8 +2,7 @@
 % Please edit documentation in R/rubinRules.R
 \name{rubinRules}
 \alias{rubinRules}
-\title{Assessing Rubin's rules in design of observational studies
-This function generates a plot to assess rubin's rules. The ratio of residual and variances, Rule 1 and 2 respectively, are displayed at the top of the plot.}
+\title{Assessing Rubin's rules in design of observational studies}
 \usage{
 rubinRules(data, Treatment, matchscore = "ps", covlist)
 }
@@ -17,7 +16,6 @@ rubinRules(data, Treatment, matchscore = "ps", covlist)
 \item{covlist}{a vector containing a list of variables in your study}
 }
 \description{
-Assessing Rubin's rules in design of observational studies
 This function generates a plot to assess rubin's rules. The ratio of residual and variances, Rule 1 and 2 respectively, are displayed at the top of the plot.
 }
 \examples{
