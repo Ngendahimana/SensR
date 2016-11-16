@@ -1,7 +1,7 @@
 
 
 #' Sensitivity Analysis for A Simple Comparison for Censored Survival
-#' This function allows you to assess how sensitive your results are to unmeasured variable.
+#' @description This function allows you to assess how sensitive your results are to unmeasured variable.
 
 #' @param data A matched sample
 #' @param exp A variables defining exposure group
