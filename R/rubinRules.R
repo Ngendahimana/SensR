@@ -18,7 +18,7 @@
 
 
 
-rubinRules = function(data,Treatment,matchscore="ps",covlist){
+rubinRules <- function(data,Treatment,matchscore="ps",covlist){
 
   results=list()
 
