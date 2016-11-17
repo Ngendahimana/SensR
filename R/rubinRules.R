@@ -14,7 +14,7 @@
 #' rubinRules(data=toy.matchedsample,Treatment="treated",covlist=covlist1)
 
 
-#' @keywords Rubin rules
+
 
 
 
