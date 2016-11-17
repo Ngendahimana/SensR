@@ -24,6 +24,4 @@ covlist1=c("covA", "covB", "covC", "covD", "covE", "covF.Middle", "covF.High", "
 # calling function
 rubinRules(data=toy.matchedsample,Treatment="treated",covlist=covlist1)
 }
-\keyword{Rubin}
-\keyword{rules}
 
